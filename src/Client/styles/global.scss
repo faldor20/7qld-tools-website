@@ -1,0 +1,29 @@
+@import "~bulma";
+ul{
+    list-style-type: disc;
+
+}
+ul ul{
+    margin-left: 1rem;
+    list-style-type: square;
+}
+label {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+.gaps *{
+margin-left: 0.1em;
+margin-top: 0.1em;
+margin-right: 0.1em;
+}
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+.vl {
+border-left: 3px solid green;
+height: 100%;
+}

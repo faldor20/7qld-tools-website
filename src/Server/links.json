@@ -1,0 +1,34 @@
+{
+    "PublicData": [
+        {
+            "Name": "Quantel",
+            "Contents": [
+                {
+                    "Name": "File Flow Queue",
+                    "Url": "http://10.41.57.30/fileflowqueue/",
+                    "Description": "For monitoring of file trasnfer between offices and export and import jobs to and from Quantel"
+                }
+            ]
+        },
+        {
+            "Name": "Empty1",
+            "Contents": []
+        },
+        {
+            "Name": "Empty2",
+            "Contents": []
+        }
+    ],
+    "AdminData": [
+        {
+            "Name": "Quantel",
+            "Contents": [
+                {
+                    "Name": "File Flow Config",
+                    "Url": "https://10.41.57.30/ffmconfig/",
+                    "Description": "For configuring file flow"
+                }
+            ]
+        }
+    ]
+}
