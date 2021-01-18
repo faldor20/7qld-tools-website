@@ -7,14 +7,14 @@ type LinkProps = { Href: string; Text: string }
 
 let link' =
     fun (props: LinkProps) ->
-        Html.a [ 
-          (* prop.style [ 
-            
+        Html.a [
+          (* prop.style [
+
             style.fontSize 24
             style.textDecoration.none
             style.color "currentColor"
             style.width (length.percent 70) ] *)
-          
+          prop.target "_blank"
           prop.classes ["button";"is-link"]
           prop.text props.Text
           prop.href props.Href ]
