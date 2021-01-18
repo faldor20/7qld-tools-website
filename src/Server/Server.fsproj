@@ -6,6 +6,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="paket.references" />
+    <None Include="ServerConfig.json" CopyToOutputDirectory="Always" CopyToPublishDirectory="Always"/>
     <Compile Include="Server.fs" />
   </ItemGroup>
   <ItemGroup>

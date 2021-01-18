@@ -34,7 +34,16 @@ type Storage() =
         with| e-> printfn"writing config to file failed with :%A" e
 
 let storage = Storage()
-
+type ConfigType={
+    url:string
+}
+let config=
+    let json=File.ReadAllText "./ServerConfig.json"
+    match Decode.Auto.fromString<ConfigType>(json) with
+    |Ok(x)->x
+    |Error(e)->
+        printfn "ERROR: could not read config file"
+        {url=""}
 
 let linksApi =
     { getLinks = fun () -> async { return storage.GetLinks() }
@@ -47,8 +56,9 @@ let webApp =
     |> Remoting.withDiagnosticsLogger (printfn "%s")
     |> Remoting.buildHttpHandler
 let app =
+
     application {
-        url "http://0.0.0.0:8085"
+        url config.url
         use_router webApp
         memory_cache
         use_static "public"
