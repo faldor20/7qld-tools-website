@@ -108,10 +108,14 @@ let main (children:ReactElement list)=
 
 let view (state: State) (dispatch: Msg -> unit) =
     main [
-        Html.h1 "Link list"
+        Html.h1 "Tools used at 7 Queensland"
+        Html.p "For any improvments, issues or otherwise contact Eli at edowling@seven.com.au"
         LinkList.render state.LinksData.PublicData
-        Bulma.input.password[
-            prop.onTextChange (PasswordChange>>dispatch)
+        Bulma.levelLeft[
+            Html.p "Password for administration"
+            Bulma.input.password[
+                prop.onTextChange (PasswordChange>>dispatch)
+            ]
         ]
         if state.CorrectPassword then
             LinkList.render state.LinksData.AdminData
